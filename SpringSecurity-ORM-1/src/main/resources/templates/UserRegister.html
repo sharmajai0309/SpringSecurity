@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            margin-top: 100px;
+        }
+        .welcome-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<div class="welcome-box">
+    <h1>Welcome, <span th:text="${#authentication.name}">User</span>!</h1>
+    <p>You have successfully logged in.</p>
+    <a href="/logout">Logout</a>
+</div>
+
+</body>
+</html>
